@@ -24,7 +24,7 @@ function LuckMenu (ply)
 		TabBG:SetSize(LuckFrame:GetWide(), TabBG:GetTall() / 0.8)
 		TabBG.Paint = function()
 			draw.RoundedBox( 2, 0, 0, TabBG:GetWide(), TabBG:GetTall(), Color( 220,224,230 ) )
-			draw.RoundedBox( 2, 0, LuckFrame:GetTall() / 9.5, TabBG:GetWide(), TabBG:GetTall(), Color( 96,109,128 ) )
+			draw.RoundedBox( 2, 0, TabBG:GetTall() /1.2, TabBG:GetWide(), TabBG:GetTall(), Color( 96,109,128 ) )
 		end
 
 		
@@ -63,7 +63,7 @@ function LuckMenu (ply)
 		buyTicks:SetText("Buy A Ticket")
 		buyTicks.Paint = function()
 			draw.RoundedBox( 2, 0, 0, buyTicks:GetWide(), buyTicks:GetTall(), Color( 86,126,187 ) )
-			draw.RoundedBox( 2, 0, LuckFrame:GetTall() / 7, buyTicks:GetWide(), buyTicks:GetTall(), Color( 43,76,126 ) )
+			draw.RoundedBox( 2, 0, buyTicks:GetTall() / 1.1, buyTicks:GetWide(), buyTicks:GetTall(), Color( 43,76,126 ) )
 		end
 		buyTicks.DoClick = function()
 			if LocalPlayer():PS_GetPoints() >= config.ticketPrice then
@@ -82,7 +82,7 @@ function LuckMenu (ply)
 		useTicks:SetText("Random Points!")
 		useTicks.Paint = function()
 			draw.RoundedBox( 2, 0, 0, useTicks:GetWide(), useTicks:GetTall(), Color( 231, 76, 60 ) )
-			draw.RoundedBox( 2, 0, LuckFrame:GetTall() / 7, useTicks:GetWide(), useTicks:GetTall(), Color( 192, 57, 43 ) )
+			draw.RoundedBox( 2, 0, useTicks:GetTall() / 1.1, useTicks:GetWide(), useTicks:GetTall(), Color( 192, 57, 43 ) )
 		end
 		useTicks.DoClick = function()
 
@@ -104,7 +104,7 @@ function LuckMenu (ply)
 		RandomItem:SetText("Random Item!")
 		RandomItem.Paint = function()
 			draw.RoundedBox( 2, 0, 0, RandomItem:GetWide(), RandomItem:GetTall(), Color( 231, 76, 60 ) )
-			draw.RoundedBox( 2, 0, LuckFrame:GetTall() / 7, RandomItem:GetWide(), RandomItem:GetTall(), Color( 192, 57, 43 ) )
+			draw.RoundedBox( 2, 0, RandomItem:GetTall() / 1.1, RandomItem:GetWide(), RandomItem:GetTall(), Color( 192, 57, 43 ) )
 		end
 		RandomItem.DoClick = function()
 
@@ -126,8 +126,8 @@ function LuckMenu (ply)
 		sellTicks:SetTextColor(Color(255,255,255))
 		sellTicks:SetText("Sell Ticket")
 		sellTicks.Paint = function()
-			draw.RoundedBox( 2, 0, 0, sellTicks:GetWide(), sellTicks:GetTall(), Color( 38, 181, 99 ) )
-			draw.RoundedBox( 2, 0, LuckFrame:GetTall() / 7, sellTicks:GetWide(), sellTicks:GetTall(), Color( 30, 138, 70 ) )
+			draw.RoundedBox( 2, 0, 0, sellTicks:GetWide(), sellTicks:GetTall(), Color( 86,126,187 ) )
+			draw.RoundedBox( 2, 0, sellTicks:GetTall() / 1.1, sellTicks:GetWide(), sellTicks:GetTall(), Color( 43,76,126 ) )
 		end
 		sellTicks.DoClick = function()
 
