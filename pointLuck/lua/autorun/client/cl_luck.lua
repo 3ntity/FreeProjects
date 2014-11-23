@@ -30,17 +30,17 @@ function LuckMenu (ply)
 		
 
 	local TicketPrice = vgui.Create("DLabel", LuckFrame)
-		local x,y = LuckFrame:GetPos() / 2, LuckFrame:GetPos() /2
-		TicketPrice:SetPos(LuckFrame:GetWide() / 2.8, LuckFrame:GetTall() /5  )
+		TicketPrice:SetPos(LuckFrame:GetWide() /3.2, LuckFrame:GetTall() /5  )
+		TicketPrice:SetSize(ScrW() * (1), ScrH() * (0.04) )
 		TicketPrice:SetText("Ticket Price: "..config.ticketPrice)
 		TicketPrice:SetTextColor(Color(0,0,0))
 		TicketPrice:SetFont("pl_font")
-		TicketPrice:SizeToContents()
+		
 
 
 	
 	local DisplayPoints = vgui.Create("DLabel", LuckFrame)
-		DisplayPoints:SetPos(LuckFrame:GetWide() /1.6, LuckFrame:GetTall() / 3)
+		DisplayPoints:SetPos(LuckFrame:GetWide() /1.6, LuckFrame:GetTall() / 2.8)
 		//DisplayPoints:SetText("Points: "..LocalPlayer():PS_GetPoints())
 		DisplayPoints.Think = function() DisplayPoints:SetText("Points: "..LocalPlayer():PS_GetPoints()) DisplayPoints:SizeToContents() end
 		DisplayPoints:SetTextColor(Color(255,255,255))
@@ -50,7 +50,7 @@ function LuckMenu (ply)
 		
 		
 	local Tickets = vgui.Create("DLabel", LuckFrame)
-		Tickets:SetPos(LuckFrame:GetWide() * 0.08, LuckFrame:GetTall() / 3)
+		Tickets:SetPos(LuckFrame:GetWide() * 0.08, LuckFrame:GetTall() / 2.8)
 		//Tickets:SetText( "Tickets: "..tickets )
 		Tickets.Think = function() Tickets:SetText("Tickets: "..tickets) Tickets:SizeToContents() end
 		Tickets:SetFont("pl_font")
