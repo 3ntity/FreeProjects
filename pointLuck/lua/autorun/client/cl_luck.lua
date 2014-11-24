@@ -5,7 +5,6 @@ surface.CreateFont( "pl_font", { font = "Lobster 1.4", size = 25, weight = 500 }
 
 function LuckMenu (ply)
 
-	local tickets = LocalPlayer():GetTickets()
 	local LuckFrame = vgui.Create("DFrame")
 		
 		LuckFrame:SetPos(75,75)
@@ -52,7 +51,7 @@ function LuckMenu (ply)
 	local Tickets = vgui.Create("DLabel", LuckFrame)
 		Tickets:SetPos(LuckFrame:GetWide() * 0.08, LuckFrame:GetTall() / 2.8)
 		//Tickets:SetText( "Tickets: "..tickets )
-		Tickets.Think = function() Tickets:SetText("Tickets: "..tickets) Tickets:SizeToContents() end
+		Tickets.Think = function() Tickets:SetText("Tickets: "..LocalPlayer():GetTickets()) Tickets:SizeToContents() end
 		Tickets:SetFont("pl_font")
 		Tickets:SetTextColor(Color(255,255,255))
 		
