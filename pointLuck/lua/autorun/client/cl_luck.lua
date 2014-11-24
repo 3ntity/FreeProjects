@@ -146,5 +146,7 @@ function LuckMenu (ply)
 
 end
 
+concommand.Add(config.conCommand, LuckMenu)
+
 net.Receive("NetLuckMenu", LuckMenu)
 

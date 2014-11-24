@@ -10,6 +10,10 @@ config.ticketPrice = 500 // Price to buy a ticket
 config.purchasePrice = 1 //How many tickets it will cost to get a random amount of points or items
 config.ticketSellPrice = 200
 
+config.allowF4 = true // Can the menu be opened via F4?
+
+config.conCommand = "lottery_menu" //what you have to type into console to open the menu
+
 --[[Addon Vgui Settings]]--
 config.menuName = "PointShop Luck" //Your probably more creative than me with names....
 

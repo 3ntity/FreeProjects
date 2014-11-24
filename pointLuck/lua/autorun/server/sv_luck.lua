@@ -40,8 +40,13 @@ end)
 
 hook.Add("ShowSpare2", "OpenLuckMenu", function (ply) 
 
+	if config.allowF4 == true then
+
 	net.Start("NetLuckMenu")
 	net.Send(ply)
+
+	else
+		return end
 
 end)
 
